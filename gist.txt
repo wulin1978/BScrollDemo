@@ -1,1 +1,24 @@
 37d1af208c76020e0d7871483470229f
+
+配置推送到GIT权限——————————————————————————————————————————————
+
+# 进入.ssh文件夹查看是否配置过公钥
+$ cd ~/.ssh
+
+# 查看.ssh文件夹下的文件，如果以前配置过公钥和用户名以及Email，则在.ssh文件夹下会有三个文件：id_rsa  id_rsa.pub  known_hosts，这里假设以前都没有配置过
+$ ls
+
+# 配置本机用户名和Email
+$ git config [--global] user.name "[name]"
+$ git config [--global] user.email "[email address]"
+
+# 使用ssh-keygen命令，然后连按三个空格就可以生成ssh 密钥
+$ ssh-keygen -t rsa
+
+# 生成ssh 密钥后，可以到~/.ssh目录下查看相关文件，一般来说ssh 密钥会包含id_rsa和id_rsa.pub两个文件，分别表示生成的私钥和公钥
+
+# 读取并复制id_rsa.pub里的公钥
+$ cat id_rsa.pub
+
+# 在github中添加公钥
+登录github >>> 进入settings页 >>> 进入 SSH and GPG keys 页 >>> 点击 New SSH key 按钮 >>> 将公钥复制到Key框中，随便输入Title，点击 Add SSH key
