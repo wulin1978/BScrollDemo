@@ -1,6 +1,6 @@
 <template>
   <div class='wrap'>
-      <div>
+      <div class='context'>
         <h1>startX</h1>
         类型：Number,
         默认值：0
@@ -158,7 +158,6 @@ export default {
       this.scroll = new BScroll('.wrap')
     })
   }
-
 }
 </script>
 <style lang='scss' scoped>
@@ -170,5 +169,8 @@ export default {
   overflow: hidden;
   text-align: left;
   padding: 8px;
+}
+.context {
+  margin-top: -30px;
 }
 </style>
