@@ -1,7 +1,5 @@
-GIST key: 42e5946b26a0fd1821d43507a873d8bc69870bf3 
-GIST ID: f3912510d1a13437a34d38fd536f098c
+GIST ID: b88c573f87b28a61872be7b979c44ea5
 
-test
 配置推送到GIT权限——————————————————————————————————————————————
 
 # 配置本机用户名和Email，没有配置用户名和Email将不能提交修改
@@ -11,7 +9,7 @@ $ git config [--global] user.email "[email address]"
 # 进入.ssh文件夹查看是否配置过公钥
 $ cd ~/.ssh
 
-# 查看.ssh文件夹下的文件，如果以前配置过公钥和用户名以及Email，则在.ssh文件夹下会有三个文件：id_rsa  id_rsa.pub  known_hosts，这里假设以前都没有配置过
+# 查看.ssh文件夹下的文件，如果以前配置过公钥和用户名以及Email，则在.ssh文件夹下会有 id_rsa id_rsa.pub，这里假设以前都没有配置过
 $ ls
 
 # 使用ssh-keygen命令，然后连按三个空格就可以生成ssh 密钥
